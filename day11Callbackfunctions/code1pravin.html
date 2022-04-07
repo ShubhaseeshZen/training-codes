@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch frog</title>
+  </head>
+  <body>
+    <h3 id="display"></h3>
+    <h3 id="display1"></h3>
+
+    <h3 id="display2"></h3>
+
+    <h3 id="display3"></h3>
+
+    <script>
+      function getFrogsWithVitalSigns(params, callback) {
+        let frogIds, frogsListWithVitalSignsData;
+
+        api.fetchFrogs(params, (frogs, error) => {
+          if (error) {
+            document.getElementById("display").innerHTML = error;
+            //console.error(error)
+            return;
+          } else {
+            frogIds = frogs.map(({ id }) => id);
+            // The list of frogs did not include their health information, so lets fetch that now
+            api.fetchFrogsVitalSigns(
+              frogIds,
+              (frogsListWithEncryptedVitalSigns, err) => {
+                if (err) {
+                  // do something with error logic
+                } else {
+                  // The list of frogs health info is encrypted. Our friend
+                  // texted us the secret key to use in this step. This is used to decrypt
+                  // the list of frogs encrypted health information
+                  api.decryptFrogsListVitalSigns(
+                    frogsListWithEncryptedVitalSigns,
+                    "pepsi",
+                    (data, errorr) => {
+                      if (errorrr) {
+                        throw new Error(
+                          "An error occurred in the final api call"
+                        );
+                      } else {
+                        if (Array.isArray(data)) {
+                          frogsListWithVitalSignsData = data;
+                        } else {
+                          frogsListWithVitalSignsData = data.map(
+                            ({ vital_signs }) => vital_signs
+                          );
+                          document.getElementById("display1").innerHTML =
+                            frogsListWithVitalSignsData;
+                        }
+                      }
+                    }
+                  );
+                }
+              }
+            );
+          }
+        });
+      }
+
+      const frogsWithVitalSigns = getFrogsWithVitalSigns({
+        offset: 50,
+      })
+        .then((result) => {
+          document.getElementById("display2").innerHTML = result;
+        })
+        .catch((error) => {
+          document.getElementById("display3").innerHTML = error;
+        });
+    </script>
+  </body>
+</html>

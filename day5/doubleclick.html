@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Double click function</title>
+
+    <style>
+        div {
+            align-self: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <h1 style="color: blue">Please double click on the button !</h1>
+      <p id="demo1"></p>
+      <p id="demo2"></p>
+      <p id="demo3"></p>
+      <p id="demo4"></p>
+      <button type="button" ondblclick="doubleclickfunction()">
+        Double click
+      </button>
+    </div>
+    <script>
+      // function for double click event
+      function doubleclickfunction() {
+        document.getElementById("demo1").innerHTML =
+          "<h1 style='color:red'>Shubhaseesh Kumar</h1>";
+        document.getElementById("demo3").innerHTML =
+          "<h1 style='color:red'>Age 20</h1>";
+        document.getElementById("demo2").innerHTML =
+          "<h1 style='color:red'>Bangalore</h1>";
+        document.getElementById("demo4").innerHTML =
+          "<h1 style='color:red'>Company Zensar</h1>";
+      }
+    </script>
+  </body>
+</html>

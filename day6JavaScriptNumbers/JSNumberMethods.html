@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Methods</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <script>
+      let number1 = 10.56987;
+      let number2 = Number.MAX_VALUE;
+      let number3 = Number.MIN_VALUE;
+      let number4 = Number.POSITIVE_INFINITY;
+      let number5 = Number.NEGATIVE_INFINITY; 
+      let number6 = Number.MAX_SAFE_INTEGER;
+      let number7 = Number.MIN_SAFE_INTEGER;
+      document.getElementById("demo1").innerHTML = number1.toString() + "<br>" + (190).toString();
+      document.getElementById("demo2").innerHTML = number1.toExponential(1);
+      document.getElementById("demo3").innerHTML = number1.toFixed(2);
+      document.getElementById("demo4").innerHTML = number1.toPrecision(2);
+      document.getElementById("demo5").innerHTML = number1.valueOf();
+      document.getElementById("demo6").innerHTML = Number(true) + "<hr>" + Number(false) + "<hr>" + Number(1090);
+      document.getElementById("demo7").innerHTML = parseFloat('9.9089') + "<hr>" + parseFloat(5.7888);
+      document.getElementById("demo8").innerHTML = parseInt('34562626') + "<hr>" + parseFloat(5.7888);
+      document.getElementById("demo9").innerHTML = number2;
+      document.getElementById("demo10").innerHTML = number3;
+      document.getElementById("demo11").innerHTML = number4;
+      document.getElementById("demo12").innerHTML = number5;
+      document.getElementById("demo13").innerHTML = number6;
+      document.getElementById("demo14").innerHTML = number7;
+    </script>
+  </body>
+</html>

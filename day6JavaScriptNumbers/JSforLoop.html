@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for loop</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p>-----------------------</p>
+    <p id="demo2"></p>
+
+    <script>
+        let person = {firstname: "Anup", lastname:"Shinde", age: 25, company: "Apple"};
+        let persondetail = [];
+        
+        let trainees = ['Anup', 'Sachin', 'Sejal', 'Vinu', 'Akshaya', 'Gopi', 'Abhijit', 'Arpit', 'Arya'];
+        let alltrainees = [];
+        // traditional way
+        for(let i=0; i<trainees.length; i++){
+            alltrainees += trainees[i] + "<hr>";
+        }
+        document.getElementById('demo1').innerHTML = alltrainees;
+        
+        // of means elements
+        for (let x of trainees){
+            persondetail += x + "<hr>";
+        }
+        document.getElementById('demo2').innerHTML = persondetail;
+    </script>
+</body>
+</html>

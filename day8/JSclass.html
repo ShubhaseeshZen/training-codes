@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Class</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <button
+      type="submit"
+      onclick="document.getElementById('demo1').innerHTML= dispaly"
+    >
+      Suzuki
+    </button>
+
+    <script>
+      class car {
+        constructor(company, price, modal, color, varient, year) {
+          this.company = company;
+          this.price = price;
+          this.modal = modal;
+          this.color = color;
+          this.varient = varient;
+          this.year = year;
+        }
+        age() {
+          let date = new Date();
+          return date.getFullYear() - this.year;
+        }
+      }
+      function objrefer() {
+        mahindra = new car(
+          "Mahindra",
+          9000000,
+          "XUV700",
+          "Red",
+          "Petrol",
+          2020
+        );
+        return (
+          "Car company " +
+          mahindra.company +
+          " variant " +
+          mahindra.modal +
+          " age " +
+          mahindra.age() +
+          " years old."
+        );
+      }
+
+      let tata = new car("Tata", 7000000, "Safari", "Green", "Petrol", 2021);
+      let dispaly =
+        "Car company " +
+        tata.company +
+        " variant " +
+        tata.modal +
+        " age " +
+        tata.age() +
+        " years old" +
+        " varient " +
+        tata.varient;
+      document.getElementById("demo").innerHTML = this.objrefer();
+    </script>
+  </body>
+  <footer>
+    
+  </footer>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="actor1"></p> 
+    <p id="actor2"></p>
+    <p id="actor3"></p>
+    <script>
+        const actor1 = {
+            firstname: "Akshay",
+            lastname: "Kumar",
+            age: 40,
+            height: 179,
+            weight: 100,
+            movies: 70,
+            fullname: function(){
+                return this.firstname+ " " + this.lastname;
+            }
+        }
+        const actor2 = {
+            firstname: "Ajay",
+            lastname: "Devgan",
+            age: 43,
+            height: 173,
+            weight: 90,
+            movies: 30,
+            fullname: function(){
+                return this.firstname+ " " + this.lastname;
+            }
+        }
+        const actor3 = {
+            firstname: "Raj",
+            lastname: "Kumar",
+            age: 46,
+            height: 189,
+            weight: 70,
+            movies: 50,
+            fullname: function(){
+                return this.firstname+ " " + this.lastname;
+            }
+        }
+        document.getElementById("actor1").innerHTML = actor1.fullname();
+        document.getElementById("actor2").innerHTML = actor2.fullname();
+        document.getElementById("actor3").innerHTML = actor3.fullname();
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <link rel="stylesheet" href="empolyee.css" /> -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details. </title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body style="background-color: rgb(255, 255, 255);">
+    <hr />
+    <div class="container">
+      <button type="button" onclick="indian_report()">Indian Report !</button>
+      <button type="button" onclick="american_report()">American Report !</button>
+      <button type="button" onclick="england_report()">England Report !</button>
+    </div>
+    <hr/>
+
+    
+    <div class="container" id="ind" style="display: none;">
+    <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>SI No.</th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td>Balu Kumar</td>
+        <td>
+          <span>&#8377</span>
+          <span>30000</span> 
+        </td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Aman Shah</td>
+        <td>
+          <span>&#8377</span>
+          <span>34000</span>
+        </td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Ajith Srinivas</td>
+        <td>
+          <span>&#8377</span>
+            <span>30200</span>
+        </td>
+      </tr>
+    </thead>
+    </table>
+  </div> 
+
+  <div class="container" id="ind" style="display: none;">
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Email</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>Jhon</td>
+                    <td>Doe</td>
+                    <td>jhon@email.com</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Jhonny</td>
+                    <td>Deol</td>
+                    <td>jhonny3@email.com</td>
+                </tr>
+            </tbody>
+        </thead>
+    </table>
+</div>
+
+<div class="container" id="usa" style="display: none;">
+    <table 
+    class="table table-bordered"
+    >
+<thead>
+      <tr>
+        <th>SI No.</th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td>Jhon Smith</td>
+        <td>
+          <span>&#36</span>
+          <span>30440</span>
+        </td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Michel Jhonson</td>
+        <td>
+          <span>&#36</span>
+          <span>20000</span>
+        </td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Arnold Shaw</td>
+        <td>
+          <span>&#36</span>
+          <span>10000</span>
+        </td>
+      </tr>
+    </thead>
+    </table>
+   </div>
+
+   <div class="container" id="eng" style="display: none;">
+    <table class="table table-bordered" >
+   <thead>
+      <tr>
+        <th>SI No.</th>
+        <th>Employee Name</th>
+        <th>Employee Salary</th>
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td>Baer Grills</td>
+        <td>
+          <span>&#xa3</span>
+          <span>30000</span>
+        </td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Rebbeca Vinod</td>
+        <td>
+          <span>&#xa3</span>
+          <span>10000</span>
+        </td>
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Thomas Sharma</td>
+        <td>
+          <span>&#xa3</span>
+          <span>10000</span>
+        </td>
+      </tr>
+    </thead>
+    </table>
+  </div>
+    
+    <script>
+      function indian_report() {
+        document.getElementById("ind").style.display="block";
+        document.getElementById("eng").style.display="none";
+        document.getElementById("usa").style.display="none";
+      }
+      function american_report() {
+        document.getElementById("ind").style.display="none";
+        document.getElementById("eng").style.display="none";
+        document.getElementById("usa").style.display="block";
+      }
+      function england_report() {
+        document.getElementById("ind").style.display="none";
+        document.getElementById("eng").style.display="block";
+        document.getElementById("usa").style.display="none";
+      }
+    </script>
+   
+    
+  </body>
+</html>

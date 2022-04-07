@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sets</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+   
+    
+
+    <script>
+        const trainee = new Set(["Anhisekh"]);
+
+        trainee.forEach(item => document.writeln(item));
+        document.writeln("<br>");
+
+        trainee.add("Pratiksha");
+        trainee.add("Arya");
+        trainee.add("Sejal");
+        trainee.forEach(item => document.writeln(item));
+
+        document.writeln("<br>");
+        trainee.delete("Arya");
+        trainee.forEach(item => document.writeln(item));
+        document.writeln("<br>");
+
+        document.writeln(trainee.has("Arya"));
+        document.write("<br>");
+        trainee.clear();
+        document.writeln(trainee);
+
+
+    </script>
+</body>
+</html>

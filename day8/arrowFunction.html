@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+
+    <button type="button" onclick="document.getElementById('demo').innerHTML = currentdate()">Today's Date</button>
+    <button type="button" onclick="document.getElementById('demo1').innerHTML = sum(300, 200)">Sum</button>
+    <button type="button" onclick="document.getElementById('demo2').innerHTML = difference(300, 200)">Difference</button>
+    <button type="button" onclick="document.getElementById('demo3').innerHTML = multiplication(300, 200)">Producte</button>
+    <button type="button" onclick="document.getElementById('demo4').innerHTML = division(300, 200)">Division</button>
+
+    <script>
+        currentdate = () => "Today's date =  " + Date();
+        
+        sum = (num1, num2) => num1 + num2;
+        difference = (num1, num2) => num1 - num2;
+        multiplication = (num1, num2) => num1 * num2;
+        division = (num1, num2) => num1 / num2; 
+        // function currentdate(){
+        //     return Date();
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Srting methods</title>
+  </head>
+  <body style="background-color:rgb(250, 207, 207)">
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <script>
+      let string1 = "Zensar is my company";
+      let newstring = "Htc is my first company ";
+      let firstname = "Amit ";
+      let lastname= "Kumar";
+      // slicing
+      document.getElementById("demo1").innerHTML = string1.slice(-10);
+      // length
+      document.getElementById("demo2").innerHTML = string1.length;
+      // trim
+      document.getElementById("demo3").innerHTML = string1.trim("Zen ");
+      // substring
+      document.getElementById("demo4").innerHTML = string1.substr("Zen");
+      // cahracter at index
+      document.getElementById("demo5").innerHTML = string1.charAt("3");
+      // concatination
+      document.getElementById("demo6").innerHTML =
+        string1.concat("in Bangalore");
+      // replace
+      document.getElementById("demo7").innerHTML = newstring.replace(
+        "Htc",
+        "Zensar"
+      );
+      // character code
+      document.getElementById("demo8").innerHTML = string1.charCodeAt("Z");
+      // replace using regex
+      document.getElementById("demo9").innerHTML = newstring.replace(/Htc/g,"Zola");
+      // conversion to upper case
+      document.getElementById("demo10").innerHTML = string1.toLocaleUpperCase();
+      //conversion to lower case
+      document.getElementById("demo11").innerHTML = string1.toLocaleLowerCase();
+      // conctaination 
+      document.getElementById("demo12").innerHTML = firstname.concat(lastname);
+      // padding
+    //   let startpadding = string1.padstart(4, "a");
+    //   document.getElementById("demo13").innerHTML = string1.padstart(20, "DDDD");
+
+      const stringarray = string1.split(" ");
+      document.getElementById("demo14").innerHTML = stringarray[0];
+
+
+    </script>
+  </body>
+</html>

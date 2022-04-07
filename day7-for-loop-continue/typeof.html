@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS typeof</title>
+  </head>
+  <body>
+
+    <p id="display"></p>
+    <script>
+
+      let types = `typeof 'praveen' = ` + typeof "praveen." + "<hr>" + 
+      `typeof NaN = ` + typeof NaN + "<hr>"+
+      `typeof false = ` + typeof false + "<hr>" + 
+      `typeof {name: "Anup"} = `+typeof {name: "Anup"} + "<hr>" +
+      `typeof null = ` + typeof null + "<hr>" + 
+      `typeof new Array() = ` + typeof new Array() + "<hr>" +
+      `typeof function () {return;} = ` + typeof function(){return;} + "<hr>" + 
+      `typeof 6.9087 = ` + typeof 6 + "<hr>" + typeof zensar;
+      
+      document.getElementById("display").innerHTML = types;
+    </script>
+  </body>
+</html>

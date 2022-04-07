@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>error handling 2</title>
+  </head>
+  <body>
+    <input id="inputbox" type="text" />
+    <button type="button" onclick="fetchfunction()">Test Input</button>
+    <p id="display"></p>
+    <p id="display1"></p>
+    <p id="display2"></p>
+
+    <script>
+      function fetchfunction() {
+        let input1 = document.getElementById("inputbox").value;
+        try {
+          if (input1 === "") throw "No input";
+          //if (isNaN(input1)) throw "Not a number";
+          input1 = Number(input1);
+          if (input1 > 100) {
+            document.getElementById("display2").innerHTML = "This is above 100";
+          }
+          if (input1 < 100) throw "below 100";
+        } catch (error) {
+          document.getElementById("display").innerHTML = error.name;
+        } finally {
+          document.getElementById("display1").innerHTML = input1;
+        }
+      }
+    </script>
+  </body>
+</html>

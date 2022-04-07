@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON</title>
+  </head>
+  <body>
+    <!-- Why Use JSON?
+    The JSON format is syntactically similar to the code for creating JavaScript objects. 
+    Because of this, a JavaScript program can easily convert JSON data into JavaScript objects.
+    Since the format is text only, JSON data can easily be sent between computers,
+    and used by any programming language.
+    JavaScript has a built in function for converting JSON strings into JavaScript objects:JSON.parse()
+    JavaScript also has a built in function for converting an object into a JSON string:
+    JSON.stringify() -->
+
+
+    <h1 id="display" style="color: red"></h1>
+    <h1 id="display1"></h1>
+    <h1 id="display2"></h1>
+
+    <script>
+      let trainees =
+        '{"frontend_trainees":[' +
+        ' {"firstname":"Shruti", "lastname":"Kunnuru"},' +
+        ' {"firstname":"Prudhvi", "lastname":"Verma"},' +
+        ' {"firstname":"Sejal", "lastname":"Kumari"},' +
+        ' {"firstname":"Shivani", "lastname":"Khare"}]}';
+
+      const traineeobject = JSON.parse(trainees);
+      document.getElementById("display").innerHTML =
+        traineeobject.frontend_trainees[0].firstname +
+        "<br>" +
+        traineeobject.frontend_trainees[1].firstname +
+        "<br>" +
+        traineeobject.frontend_trainees[2].firstname +
+        "<br>" +
+        traineeobject.frontend_trainees[3].firstname +
+        "<br>";
+
+      document.getElementById("display1").innerHTML = JSON.stringify(trainees);
+      // js object to JSON
+
+      const jsobj = {
+        name: 'Praveen',
+        age: 34,
+      };
+      const jsonobj = stringify(jsobj);
+      document.getElementById("display2").innerHTML = "<br>"+jsonobj;
+
+    </script>
+  </body>
+</html>

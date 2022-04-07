@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>error handling 1</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+
+    <script>
+      // error handling
+      // 1. try
+      // 2. catch
+      // 3. throw
+      // 4. finally
+      let inputnumber = 1.9999999;
+      // Reference error
+      try {
+        addalert("Hello");
+      } catch (err) {
+        document.getElementById("demo").innerHTML = err.name;
+      }
+      // Range error
+      try {
+        document.getElementById("dem1").innerHTML =
+          inputnumber.toPrecision(990);
+      } catch (err) {
+        document.getElementById("demo1").innerHTML = err.name;
+      }
+      // Reference error
+      try {
+        let name1 = eval("sefrl");
+      } catch (err) {
+        document.getElementById("demo2").innerHTML = err.name;
+      }
+      // URI Error 
+      try {
+        let uri = decodeURI("897%%");
+      } catch (err) {
+        document.getElementById("demo3").innerHTML = err.name;
+      }
+      // Type error
+      try {
+        inputnumber.toUpperCase();
+      } catch (err) {
+        document.getElementById("demo4").innerHTML = err.name;
+      }
+    </script>
+  </body>
+</html>

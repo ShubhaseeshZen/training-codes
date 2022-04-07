@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time out function</title>
+</head>
+<body>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <script>
+        // program shows time out function
+        function greet(name, myFunction) {
+            document.getElementById('d2').innerHTML = ('Hello World');
+
+            myFunction(name);
+        }
+        function sayName(name){
+            document.getElementById('d1').innerHTML = ('Hello' + ' ' + name );
+        }
+        // calling the function
+        setTimeout(greet, 2000, 'Jhon', sayName);
+        
+    </script>
+</body>
+</html>

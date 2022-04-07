@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string search</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+        let searchstring = "This is Zensar Zensar  zensar zensar training, Trainer is Praveen Hegde";
+        document.getElementById("demo1").innerHTML = searchstring.indexOf("Zensar");
+        document.getElementById("demo2").innerHTML = searchstring.lastIndexOf("Zensar");
+        
+        // most used in industry, used mainly in web crawling
+        document.getElementById("demo3").innerHTML = searchstring.search(/zensar/i);
+        document.getElementById("demo4").innerHTML = searchstring.match(/zensar/gi);
+        
+        // strats with and ends with
+        document.getElementById("demo5").innerHTML = searchstring.startsWith("This");
+        document.getElementById("demo6").innerHTML = searchstring.endsWith("Hegde");
+        
+        // Template literals
+        let firstname = "Amit";
+        let lastname = "Kumar";
+        let templatetext = `Welcome ${firstname} ${lastname}`;
+        document.getElementById("demo7").innerHTML = templatetext;
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function for average</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <script>
+      const trainee1 = { week1: 25, week2: 30, week3: 23, week4: 40 };
+
+      function average (trainees) {
+        alltrainees = [];
+        let total = 0;
+        let average = 0;
+        let totalNumberOfTrainees = Object.keys(trainee1).length;
+
+        for (let i in trainee1) {
+            total += trainee1[i];
+        }
+
+        average = total / totalNumberOfTrainees;
+        return average;
+      }
+
+      
+    </script>
+    <button type="submit" onclick="document.getElementById('demo1').innerHTML = average">click</button>
+  </body>
+</html>

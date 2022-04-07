@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>using api and fetching data</title>
+  </head>
+  <body>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+    <!-- var data = {
+    code: 42,
+    items: [{
+        id: 1,
+        name: 'foo'
+    }, {
+        id: 2,
+        name: 'bar'
+    }]
+}; -->
+    <script>
+      
+      function getFrogsWithVitalSigns(params, callback) {
+        let frogIds, frogsListWithVitalSignsData;
+        let api = {
+          vital_signs: {
+            color:{id:'color'},
+            bites:{id:'bite'},
+            junps:{id:'jumps'}
+          },
+          params:{}
+        };
+        api
+          .fetchFrogs(params)
+          .then((frogs) => {
+            frogIds = frogs.map(({ id }) => id);
+            // The list of frogs did not include their health information,
+            // so lets fetch that now
+            return api.fetchFrogsVitalSigns(frogIds);
+          })
+          .then((frogsListWithEncryptedVitalSigns) => {
+            // The list of frogs health info is encrypted. Our friend texted
+            // us the secret key to use in this step. This is used to decrypt the
+            // list of frogs encrypted health information
+            return api.decryptFrogsListVitalSigns(
+              frogsListWithEncryptedVitalSigns,
+              "pepsi"
+            );
+          })
+          .then((data) => {
+            if (Array.isArray(data)) {
+              frogsListWithVitalSignsData = data;
+            } else {
+              frogsListWithVitalSignsData = data.map(
+                ({ vital_signs }) => vital_signs
+              );
+              document.getElementById("d1").innerHTML =
+                frogsListWithVitalSignsData;
+            }
+          })
+          .catch((error) => {
+            document.getElementById("d1").innerHTML = error;
+          });
+      }
+
+      const frogsWithVitalSigns = getFrogsWithVitalSigns({
+        offset: 50,
+      })
+        .then((result) => {
+          document.getElementById("d2").innerHTML = result;
+        })
+        .catch((error) => {
+          document.getElementById("d2").innerHTML = error;
+        });
+    </script>
+  </body>
+</html>

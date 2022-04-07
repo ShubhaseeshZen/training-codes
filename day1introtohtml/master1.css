@@ -1,0 +1,43 @@
+#table1{
+    color: rgb(10, 10, 10);
+
+}
+table, th, td {
+    border : 2px solid black;
+    border-collapse : collapse;
+    height: auto;
+    border-color: solid green;
+    margin-top: 5%;
+    width: 60%;
+    border-spacing: 12px;
+}
+th, td {
+    padding : 5px;
+    text-align : center;
+
+}
+caption {
+    font-family : verdana;
+    font-size :  30px;
+    color : red;
+}
+p{
+    color: red;
+}
+h1{
+    color: rgb(68, 68, 228);
+}
+div {
+    border : 2px solid black;
+    background-color : grey; 
+    text-align : center;
+    background-image : url("./mountain.jpg");
+    background-repeat : no-repeat;
+    font-size : 20px;
+    
+    
+}
+img {
+    height : auto;
+    width : auto;
+}

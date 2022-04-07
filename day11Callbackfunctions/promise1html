@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  <body>
+    <h1 id="d1"></h1>
+    <script>
+      function display1(value) {
+        document.getElementById("d1").innerHTML = value;
+      }
+      let mypromoise = new Promise(function (myResolve, myReject) {
+        let val1 = 0;
+        val1 = 6 - 1;
+        if (val1 == 0) {
+          myResolve("ok");
+        } else {
+          myReject("Error");
+        }
+      });
+      mypromise.then(
+        function (message) {
+          display1(message);
+        },
+        function (error) {
+          display1(error);
+        }
+      );
+    </script>
+  </body>
+</html>

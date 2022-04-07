@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Arrays</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+
+    <script>
+        var table = ["wood", "plastic", "steel", "carbon"];
+        var chair = new Array("wood", "plastic","wood", "steel", "fibre");
+        
+
+        const trainees = ["Pratiksha", "Siksha", "Tamal", "shivani", "Anup", "Abhisekh"];
+
+        const FrontEnd_Trainees = [];
+        FrontEnd_Trainees[0] = "Monika";
+        FrontEnd_Trainees[1] = "Sachine";
+        FrontEnd_Trainees[2] = "Prudgvi";
+
+        // Array Object
+        const ArrObj = new Array("Praveen", "Bhavdane", "Sejal", "Gopi");
+
+        // Object like Dictionary in python
+        const TraineeDetail = {Name: "Praveen Hegde", Marks: 99, Age: 64, Week : 6};
+
+        const numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+
+        document.getElementById("demo1").innerHTML = trainees;
+        document.getElementById("demo2").innerHTML = table;
+        document.getElementById("demo3").innerHTML = chair;
+    
+        document.getElementById("demo5").innerHTML = FrontEnd_Trainees;
+        document.getElementById("demo6").innerHTML = ArrObj;
+        document.getElementById("demo7").innerHTML = TraineeDetail.Name + " has marks : " + TraineeDetail.Marks + " and age about " + TraineeDetail.Age;
+        document.getElementById("demo8").innerHTML = typeof TraineeDetail;
+        let initvalue = "";
+        document.getElementById("demo9").innerHTML = trainees.reduce( (initvalue, currvalue) => initvalue + "<br>" + currvalue, initvalue );
+        document.getElementById("demo10").innerHTML = numArray.pop();
+        document.getElementById("demo11").innerHTML = numArray.push(100);
+        document.getElementById("demo12").innerHTML = numArray;
+    </script>
+</body>
+</html>

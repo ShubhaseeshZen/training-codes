@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers in js</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <script>
+      let number1 = 4.8007;
+      let number2 = 4;
+
+      // number in scientific notation
+      let number3 = 23e78;
+      let number4 = 800e2 - 5;
+
+      // number of 15 digit no issue shown exactly same
+      let number5 = 999999999999999;
+
+      // if a number is more than 16 or equal to 16-digits then it round off to next bigger number
+      let number6 = 9999999999999999;
+      
+      let number7 = 0.2 + 0.1;
+      let number8 = (0.2 * 10 + 0.1 * 10) / 10;
+
+      let number9 = "100";
+      let number10 = "30";
+      let number11 = number9 + number10;
+
+      let number12 = 100;
+      let str1 = "Praveen";
+      let number13 = number12 / str1;
+
+      let nan1 = NaN;
+      let number14 = "100";
+      let number15 = nan1 + number14;
+
+      let number16 = 2 / 0;
+      let number17 = -2 / 0;
+      let number18 = new Number(125);
+      let number19 = new Number(125);
+      let number20 = number18 === number19;
+
+      document.getElementById("demo1").innerHTML = number1 + "<br>" + number2;
+      document.getElementById("demo2").innerHTML = number3 + "<br>" + number4;
+      document.getElementById("demo3").innerHTML = number5 + "<br>" + number6;
+      document.getElementById("demo4").innerHTML = number7;
+      document.getElementById("demo5").innerHTML = number8;
+      document.getElementById("demo6").innerHTML = number11;
+      document.getElementById("demo7").innerHTML = number13;
+      document.getElementById("demo8").innerHTML = isNaN(number13);
+      document.getElementById("demo9").innerHTML = number15;
+      document.getElementById("demo10").innerHTML = number16;
+      document.getElementById("demo11").innerHTML = number17;
+      document.getElementById("demo12").innerHTML = typeof number18;
+      document.getElementById("demo13").innerHTML = number20;
+    </script>
+  </body>
+</html>
