@@ -6,31 +6,24 @@
 
   <body>
     <h1 style="color: green">GeeksforGeeks</h1>
-
-    <b>JavaScript | padStart() method</b>
-
+     <strong>JavaScript | padStart() method</strong>
     <p>
       Output for "Hello123" with "$":
       <span class="output"></span>
     </p>
-
     <p>
       Output for "Geeks" with "XX":
       <span class="output_2"></span>
     </p>
-
     <button onclick="padStrings()">Pad Strings</button>
-
     <script type="text/javascript">
       function padStrings() {
         exString = "Hello123";
         exString2 = "Geeks";
-
-        prepended_out = exString.padStart(10, "$");
-        prepended_out2 = exString2.padStart(10, "XX");
+        prepended_out = exString.padStart(12, "$");
+        prepended_out2 = exString2.padStart(12, "XX");
 
         document.querySelector(".output").textContent = prepended_out;
-
         document.querySelector(".output_2").textContent = prepended_out2;
       }
     </script>

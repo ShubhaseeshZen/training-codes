@@ -8,12 +8,12 @@
 </head>
 <body>
 
-    <p id="cs2"> This is  Bangalore</p>
-    <h1 onmouseover=changeTo(this)> Click me</h1>
+    <h1 id="cs2"> This is  Bangalore</h1>
+    <h1 onclick=changeTo(this)> Click me</h1>
     <h1 id="t1" onmouseover="dispDate()" >Time</h1>
 
-    <button type="button" onclick="document.getElementById('cs2').style.color=red">Click</button>
-
+    <button type="button" onclick="document.getElementById('cs2').style.color='red'">Click</button>
+    <button type="button" onclick="reload1()">Reload</button>
     <script>
         function changeTo(id){
             id.style.color = "green";
@@ -22,6 +22,9 @@
         console.log(id);
         function dispDate(){
             document.getElementById("t1").innerHTML = Date();
+        }
+        function reload1(){
+            window.location.reload();
         }
     </script>
     
