@@ -8,12 +8,14 @@
   </head>
   <body>
     <p>this is second example</p>
-
+    <p id="d1"></p>
     <script>
-      document.write(5 + 10);
-      document.write(53 + 13);
-      document.writeln(5 + 10);
-      document.writeln(5 + 10);
+      const sayhi = () =>{document.getElementById('d1').innerHTML = ("Hi There")};
+      // document.write(5 + 10) + "<br/>";
+      // document.write(53 + 13) + "<br/>";
+      // document.writeln(5 + 10) + "<br/>";
+      document.write("<h2>Hello World!</h2><p>Have a nice day!</p>");
+      document.write("<button type='button' onclick='sayhi()'>Say Hi</button>");
     </script>
   </body>
 </html>

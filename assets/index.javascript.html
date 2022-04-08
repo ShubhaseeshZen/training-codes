@@ -12,10 +12,8 @@
     <p id="image"> </p>
     <script>
       document.getElementById("demo").innerHTML = Date();
-      document.getElementById("demo").style.fontSize="20px";
-      document.getElementById("demo").style.fontFamily="Arial";
-      document.getElementById("demo1").style.animation=Array;
-      document.getElementById("demo1").style.color="yellow";
+      const date = new Date();
+      document.getElementById("demo1").innerHTML ="Day :" + date.getDay() + " Month :" + date.getMonth()+ " Year :" + date.getFullYear();    
     </script>
   </body>
 </html>

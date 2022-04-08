@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>javascript practice</title>
-</head>
-<body>
-    <button type="button" onclick="document.getElementById('demo').innerHTML=Date()"> click here</button>
-  
+  </head>
+  <body>
+    <button
+      type="button"
+      onclick="document.getElementById('demo').style.display = 'block' "
+    >
+      click here
+    </button>
 
-    <p id="demo" ></p>
+    <p id="demo"style='display:none'>This is Date</p>
 
     <script>
-        document.getElementsByTagName("p").innerHTML = 1000;
+      document.getElementsByTagName("p").innerHTML.style.display = 'block';
     </script>
-</body>
+  </body>
 </html>

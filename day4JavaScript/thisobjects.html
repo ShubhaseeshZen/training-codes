@@ -15,19 +15,17 @@
             firstName: "Kumasami",
             lastName: "Gundappa",
             color: "fair",
-            height: 174,
+            height: 1.74,
             eyecolor: "blue",
             weight: 100,
             fullname: function(){
                 return this.firstName + " " + this.lastName;
             },
             BodyMassIndex: function(){
-                return this.height/this.weight;
+                return this.weight/(this.height*this.height);
             }
         };
-        document.getElementById("person1").innerHTML=person.firstName + " " + person.lastName;
         document.getElementById("person2").innerHTML=person["firstName"] + " " + person["lastName"];
-        document.getElementById("person1").innerHTML=person.fullname();
         document.getElementById("person1").innerHTML=person.BodyMassIndex();
 
         
